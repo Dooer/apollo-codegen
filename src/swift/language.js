@@ -25,7 +25,7 @@ export function structDeclaration(generator, { structName, description, adoptedP
 }
 
 export function propertyDeclaration(generator, { propertyName, typeName, description }) {
-  generator.printOnNewline(`public let ${propertyName}: ${typeName}`);
+  generator.printOnNewline(`public var ${propertyName}: ${typeName}`);
   generator.print(description && ` /// ${description}`);
 }
 
